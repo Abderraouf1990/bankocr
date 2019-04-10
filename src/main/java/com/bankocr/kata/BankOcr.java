@@ -26,6 +26,7 @@ public class BankOcr {
             AccountNumber accountNumber;
             while (reader.getReader().ready() && (accountNumber = new AccountNumber(reader.getNextAccountNumber())) != null) {
                 log.info("Account Number: {}", accountNumber.getNumber());
+                log.info("Account Status: {}", accountNumber.getStatus());
             }
 
             log.info("Lecture des numéros de compte terminée avec succès");
